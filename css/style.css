@@ -138,14 +138,26 @@ body {
   letter-spacing: 0.02em;
 }
 
-.site-nav .active {
+.active {
+  position: relative;
+  padding: 32px 0;
   color: var(--akcent-color);
   text-decoration: none;
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
+.active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
 
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--akcent-color);
+}
 /* adress header*/
 /*link style*/
 .site-adr {
