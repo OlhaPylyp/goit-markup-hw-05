@@ -12,7 +12,7 @@
   --overlay: #c4c4c4;
   --social-icon: #afb1b8;
   --background: rgba(47, 48, 58, 0.4);
-  --trancision: 2s cubic-bezier(0.4, 0, 0.2, 1);
+  --trancision: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -137,6 +137,7 @@ body {
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition: var(--trancision);
 }
 
 .active {
@@ -154,17 +155,12 @@ body {
   content: "";
   left: 0;
   bottom: 0;
-
-  width: 0%;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--akcent-color);
-  /* opacity: 0; */
 }
-.active:hover::after {
-  width: 100%;
-  /* transition: opacity 25000ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
+
 /* adress header*/
 /*link style*/
 .site-adr {
@@ -186,6 +182,7 @@ body {
 
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition: var(--trancision);
 }
 
 /* конвертик и телефон возле почты */
